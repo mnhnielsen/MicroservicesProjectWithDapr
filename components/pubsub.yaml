@@ -1,0 +1,51 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: commonpubsub
+  namespace: developmentsandbox
+spec:
+  type: pubsub.azure.servicebus
+  version: v1
+  metadata:
+  - name: connectionString # Required when not using Azure Authentication.
+    secretKeyRef:
+      name: connectionString
+      key: connectionString
+auth:
+  secretStore: localsecretstore
+  # - name: consumerID # Optional: defaults to the app's own ID
+  #   value: "{identifier}" 
+  # - name: timeoutInSec # Optional
+  #   value: 60
+  # - name: handlerTimeoutInSec # Optional
+  #   value: 60
+  # - name: disableEntityManagement # Optional
+  #   value: "false"
+  # - name: maxDeliveryCount # Optional
+  #   value: 3
+  # - name: lockDurationInSec # Optional
+  #   value: 60
+  # - name: lockRenewalInSec # Optional
+  #   value: 20
+  # - name: maxActiveMessages # Optional
+  #   value: 10000
+  # - name: maxConcurrentHandlers # Optional
+  #   value: 10
+  # - name: defaultMessageTimeToLiveInSec # Optional
+  #   value: 10
+  # - name: autoDeleteOnIdleInSec # Optional
+  #   value: 3600
+  # - name: minConnectionRecoveryInSec # Optional
+  #   value: 2
+  # - name: maxConnectionRecoveryInSec # Optional
+  #   value: 300
+  # - name: maxRetriableErrorsPerSec # Optional
+  #   value: 10
+  # - name: publishMaxRetries # Optional
+  #   value: 5
+  # - name: publishInitialRetryInternalInMs # Optional
+  #   value: 500
+
+
+
+
