@@ -1,0 +1,16 @@
+http://localhost:5010/v1.0/invoke/order-service/method/order
+Content-Type: application/json
+
+{
+  "Date": "2022-12-07",
+  "Items": [
+    {
+      "ProductCode": "rockiecookie",
+      "Quantity": 1
+    },
+    {
+      "ProductCode": "bussola8",
+      "Quantity": 2
+    }
+  ]
+}

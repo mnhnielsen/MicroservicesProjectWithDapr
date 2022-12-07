@@ -4,8 +4,14 @@ namespace sample.microservice.service1.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        public const string StoreName = "orderstore";
+        //public const string StoreName = "orderstore";
         public const string PubSub = "commonpubsub";
+
+        [HttpGet("get")]
+        public ActionResult<string> Get()
+        {
+            return "Connected...";
+        }
 
         [HttpPost("order")]
         public async Task<ActionResult<Guid>> SubmitOrder(Order order, [FromServices] DaprClient daprClient)
@@ -24,7 +30,7 @@ namespace sample.microservice.service1.Controllers
             //await state.SaveAsync();    //Save
 
             //Publish order on topic to subscribers.
-            await daprClient.PublishEventAsync<Order>(PubSub, Topics.OrderSubmittedTopicName, order);
+            await daprClient.PublishEventAsync<Order>(PubSub, Topics.OrderStoredTopicName, order);
 
             Console.WriteLine($"Submitted order {order.Id}");
             return order.Id;
