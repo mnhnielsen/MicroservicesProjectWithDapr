@@ -1,0 +1,15 @@
+name: micro-service-test-env
+extensions:
+
+  # Configuration for dapr goes here.
+- name: dapr
+  components-path: ./components
+
+services:
+  
+  # The name will be used as the app-id. For a .NET project, Tye only needs the path to the project file.
+- name: order-service
+  project: sample.microservice.service1\sample.microservice.service1.csproj
+- name: shipping-service
+  project: sample.microservice.service2\sample.microservice.service2.csproj
+
