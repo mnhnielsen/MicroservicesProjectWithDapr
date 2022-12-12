@@ -1,0 +1,24 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: shippingstore
+spec:
+  type: state.azure.cosmosdb
+  version: v1
+  metadata:
+  - name: url
+    secretKeyRef:
+      name: url
+      key: url
+
+  - name: masterKey
+    secretKeyRef:
+      name: masterKey
+      key: masterKey
+
+  - name: database
+    value: state
+  - name: collection
+    value: shippingstate
+auth:
+  secretStore: localsecretstore
