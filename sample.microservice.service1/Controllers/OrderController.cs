@@ -10,7 +10,7 @@ namespace sample.microservice.service1.Controllers
         [HttpGet("get")]
         public ActionResult<string> Get()
         {
-            return "Connected...";
+            return "Connected order service...";
         }
 
         [HttpPost("order")]
@@ -29,7 +29,7 @@ namespace sample.microservice.service1.Controllers
 
             //await state.SaveAsync();    //Save
 
-            //Publish order on topic to subscribers.
+            //Publish order on topic to OnOrder_Prepared topic on Azure.
             await daprClient.PublishEventAsync<Order>(PubSub, Topics.OrderStoredTopicName, order);
 
             Console.WriteLine($"Submitted order {order.Id}");

@@ -1,0 +1,10 @@
+apiVersion: dapr.io/v1alpha1
+kind: Subscription
+metadata:
+  name: orders
+spec:
+  topic: on_order_stored
+  route: /checkout
+  pubsubname: commonpubsub
+scopes:
+  - shipping-service

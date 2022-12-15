@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sample.microservice.dto.ord
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sample.microservice.dto.shipment", "sample.microservice.dto.shipment\sample.microservice.dto.shipment.csproj", "{C7ACA58D-1405-4659-A951-47B771EA8A89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sample.microservice.reservation", "sample.microservice.reservation\sample.microservice.reservation.csproj", "{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,5 +91,17 @@ Global
 		{C7ACA58D-1405-4659-A951-47B771EA8A89}.Release|x64.Build.0 = Release|Any CPU
 		{C7ACA58D-1405-4659-A951-47B771EA8A89}.Release|x86.ActiveCfg = Release|Any CPU
 		{C7ACA58D-1405-4659-A951-47B771EA8A89}.Release|x86.Build.0 = Release|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Debug|x64.Build.0 = Debug|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Debug|x86.Build.0 = Debug|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Release|x64.ActiveCfg = Release|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Release|x64.Build.0 = Release|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Release|x86.ActiveCfg = Release|Any CPU
+		{6D9FC9BA-2780-4DD3-BEEA-41D988A8FB5B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

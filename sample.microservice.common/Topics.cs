@@ -9,6 +9,6 @@ namespace sample.microservice.common
     public class Topics
     {
         public const string OrderStoredTopicName = "On_Order_Stored";
-        public const string OrderPreparedTopicName = "OnOrder_Prepared";
+        //public const string OrderPreparedTopicName = "OnOrder_Prepared";
     }
 }

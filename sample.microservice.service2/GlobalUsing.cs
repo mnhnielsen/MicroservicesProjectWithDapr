@@ -5,3 +5,5 @@ global using Microsoft.AspNetCore.Mvc;
 global using sample.microservice.dto.shipment;
 global using sample.microservice.common;
 global using sample.microservice.service2.State;
+global using sample.microservice.dto.order;
+
