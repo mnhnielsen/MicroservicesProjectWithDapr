@@ -2,9 +2,11 @@
 {
     public class CatalogService : ICatalogService
     {
-        public Task<Product> GetProductAsync(string productId)
+        public const string StoreName = "statestore";
+        public async Task<Product?> GetProductAsync(string productId)
         {
             throw new NotImplementedException();
+
         }
 
         public Task<IEnumerable<Product>> GetProductsAsync()

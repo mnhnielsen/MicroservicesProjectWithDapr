@@ -3,6 +3,6 @@
     public interface ICatalogService
     {
         Task<IEnumerable<Product>> GetProductsAsync();
-        Task<Product> GetProductAsync(string productId);
+        Task<Product?> GetProductAsync(string productId);
     }
 }

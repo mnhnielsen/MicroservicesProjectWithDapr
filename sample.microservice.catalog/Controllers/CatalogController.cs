@@ -12,9 +12,20 @@
             _catalogService = catalogService ?? throw new ArgumentNullException(nameof(catalogService));
         }
 
+        [HttpGet("get")]
         public ActionResult<string> Get()
         {
             return "Connected catalog service...";
+        }
+
+        public async Task<IActionResult> GetProductAsync(string productId)
+        {
+            var product = await _catalogService.GetProductAsync(productId);
+
+            if (product == null)
+                return NotFound();
+
+            return Ok(product);
         }
     }
 }
