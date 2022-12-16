@@ -1,3 +1,5 @@
+#This is for storing whatever comes through the sample.microservice.service2 controller. Set up with Azure Cosmos NoSQL Database 
+#with the collection called shippingstate
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:

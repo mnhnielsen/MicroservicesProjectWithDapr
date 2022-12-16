@@ -1,3 +1,4 @@
+#Azure Service Bus pub/sub component with connection secrets from local-secret-store.yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
