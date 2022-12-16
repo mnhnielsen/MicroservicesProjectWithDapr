@@ -1,5 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
+var jsonOpt = new JsonSerializerOptions()
+{
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+    PropertyNameCaseInsensitive = true,
+};
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -16,10 +22,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCloudEvents();
 
 app.MapControllers();
+
+app.MapSubscribeHandler();
 
 app.Run();
