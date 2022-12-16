@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using sample.microservice.dto.product;
 
 namespace sample.microservice.dto.order
 {
@@ -15,7 +16,7 @@ namespace sample.microservice.dto.order
 
     public class OrderItem
     {
-        public string? ProductCode { get; set; }
+        public Product? Product { get; set; }
 
         public int Quantity { get; set; }
     }

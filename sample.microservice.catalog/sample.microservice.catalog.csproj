@@ -12,11 +12,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Controllers\" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\sample.microservice.common\sample.microservice.common.csproj" />
+		<ProjectReference Include="..\sample.microservice.dto.product\sample.microservice.dto.product.csproj" />
 	</ItemGroup>
 
 </Project>
