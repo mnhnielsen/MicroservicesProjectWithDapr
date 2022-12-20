@@ -8,7 +8,7 @@ namespace sample.microservice.dto.product
 {
     public class Product
     {
-        public Guid Id = Guid.NewGuid();
+        public string Id { get; set; }
         public string? ProductCode { get; set; }
     }
 }

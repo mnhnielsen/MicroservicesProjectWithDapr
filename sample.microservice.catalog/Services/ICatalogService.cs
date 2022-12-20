@@ -4,5 +4,6 @@
     {
         Task<IEnumerable<Product>> GetProductsAsync();
         Task<Product?> GetProductAsync(string productId);
+        bool Configure();
     }
 }

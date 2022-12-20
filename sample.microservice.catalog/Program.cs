@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using sample.microservice.catalog.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var jsonOpt = new JsonSerializerOptions()
@@ -13,6 +16,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICatalogService, CatalogService>();
+builder.Services.AddDbContext<ProductContext>(options =>
+{
+    options.UseCosmos(
+        "URL",
+        "KEY",
+        "state"
+        );
+});
 
 var app = builder.Build();
 
@@ -22,6 +33,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+//For testing only
+//string Endpoint = Environment.GetEnvironmentVariable("COSMOS_ENDPOINT") ?? string.Empty;
+//string Key = Environment.GetEnvironmentVariable("COSMOS_KEY") ?? string.Empty;
+
+//var options = new DbContextOptionsBuilder<ProductContext>().UseCosmos(Endpoint, Key, nameof(ProductContext)).Options;
+//await ProductContext.CheckAndSeedDatabaseAsync(options);
+
 
 //app.UseHttpsRedirection();
 

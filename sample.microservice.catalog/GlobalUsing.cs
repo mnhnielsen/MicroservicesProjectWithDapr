@@ -5,3 +5,6 @@ global using Microsoft.AspNetCore.Mvc;
 global using sample.microservice.common;
 global using sample.microservice.dto.product;
 global using sample.microservice.catalog.Services;
+global using Microsoft.Azure.Cosmos;
+global using Microsoft.EntityFrameworkCore.Cosmos;
+global using Microsoft.EntityFrameworkCore;
